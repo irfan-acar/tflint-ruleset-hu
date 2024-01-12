@@ -10,12 +10,9 @@ func main() {
 	plugin.Serve(&plugin.ServeOpts{
 		RuleSet: &tflint.BuiltinRuleSet{
 			Name:    "template",
-			Version: "1.1.4",
+			Version: "1.1.6",
 			Rules: []tflint.Rule{
 				rules.NewAProviderDefaultTagsTypeRule(),
-				rules.NewAwsS3BucketExampleLifecycleRule(),
-				rules.NewGoogleComputeSSLPolicyRule(),
-				rules.NewTerraformBackendTypeRule(),
 			},
 		},
 	})
